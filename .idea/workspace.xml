@@ -4,26 +4,54 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="19f172b7-ecaa-43e6-a72b-65471e2c6934" name="Changes" comment="" />
+    <list default="true" id="a91c0b1c-5521-4037-8e65-f2c66b19cc83" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/controller/Controller.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/models/Customer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/models/Delivery.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/models/Drink.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/models/Employee.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/models/Food.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/models/Idmethods.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/models/Location.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/models/Manager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/models/Order.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/models/Person.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/models/Product.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/models/Tuple.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/repository/InMemoryRepo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/repository/RepoInterface.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ui/UI.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/ControllerTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/InMemoryRepoTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../json_reader_basic/src/main/java/org/example/Statistics.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Lab/Lab1/src/TestRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Lab/Lab1/src/TestRunner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Lab/Lab1/src/ex4/ElectronicsStoreTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Lab/Lab1/src/ex4/ElectronicsStoreTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Seminar2/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Seminar2/.idea/misc.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="MarkdownSettingsMigration">
-    <option name="stateVersion" value="1" />
-  </component>
-  <component name="MavenImportPreferences">
-    <option name="generalSettings">
-      <MavenGeneralSettings>
-        <option name="mavenHome" value="Use Maven wrapper" />
-      </MavenGeneralSettings>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
   <component name="ProjectColorInfo">{
-  &quot;associatedIndex&quot;: 7
+  &quot;associatedIndex&quot;: 0
 }</component>
-  <component name="ProjectId" id="2XAR6k8r8vXmUHx8C0IYEkpxnxX" />
+  <component name="ProjectId" id="2XIt8pGAyJcX6QXOGGuxKwA2nuo" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -33,37 +61,90 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Latitude/Desktop/github_repositories/Coffeeshop-Java-University&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Latitude/Desktop/github_repositories/Coffeeshop-Java-University/.idea&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;onboarding.tips.debug.path&quot;: &quot;C:/Users/Latitude/Desktop/github_repositories/Java-University/Seminar/Coffeeshop-Java-University/src/main/java/org/example/Main.java&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager">
-    <configuration name="CoffeeshopApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
-      <module name="coffeeshop" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="map.project.coffeeshop.CoffeeshopApplication" />
+  <component name="RunManager" selected="Application.Main">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="Coffeeshop-Java-University" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="ControllerTest" type="JUnit" factoryName="JUnit">
+      <module name="Coffeeshop-Java-University" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="ControllerTests" />
+      <option name="METHOD_NAME" value="" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="InMemoryRepoTests" type="JUnit" factoryName="JUnit">
+      <module name="Coffeeshop-Java-University" />
+      <option name="MAIN_CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="TEST_OBJECT" value="pattern" />
+      <patterns>
+        <pattern testClass="InMemoryRepoTests" />
+      </patterns>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.Main" />
+      <item itemvalue="JUnit.InMemoryRepoTests" />
+      <item itemvalue="JUnit.ControllerTest" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="19f172b7-ecaa-43e6-a72b-65471e2c6934" name="Changes" comment="" />
-      <created>1698069730504</created>
+      <changelist id="a91c0b1c-5521-4037-8e65-f2c66b19cc83" name="Changes" comment="" />
+      <created>1698328272893</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1698069730504</updated>
-      <workItem from="1698069731997" duration="668000" />
-      <workItem from="1698304076825" duration="1337000" />
+      <updated>1698328272893</updated>
+      <workItem from="1698328273950" duration="2940000" />
+      <workItem from="1698424786153" duration="7526000" />
+      <workItem from="1698476950650" duration="21576000" />
+      <workItem from="1698648479469" duration="11101000" />
+      <workItem from="1698659857056" duration="1029000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/example/Main.java</url>
+          <line>15</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

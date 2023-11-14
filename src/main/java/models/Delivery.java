@@ -1,5 +1,7 @@
 package models;
 
+import org.apache.commons.lang3.tuple.Pair;
+
 import java.util.List;
 
 public class Delivery {
@@ -8,7 +10,7 @@ public class Delivery {
     private String supplier;
     private String supplierAdress;
     private String date;
-    private List<Tuple<Product,Integer>> products;
+    private List<Pair<Product,Integer>> products;
 
     @Override
     public String toString() {
@@ -24,7 +26,7 @@ public class Delivery {
 
     private float totalCosts;
 
-    public Delivery(int id, int locationId, String supplier, String supplierAdress, String date, List<Tuple<Product, Integer>> products, float totalCosts) {
+    public Delivery(int id, int locationId, String supplier, String supplierAdress, String date, List<Pair<Product, Integer>> products, float totalCosts) {
         this.id = id;
         this.locationId = locationId;
         this.supplier = supplier;
@@ -74,11 +76,11 @@ public class Delivery {
         this.date = date;
     }
 
-    public List<Tuple<Product, Integer>> getProducts() {
+    public List<Pair<Product, Integer>> getProducts() {
         return products;
     }
 
-    public void setProducts(List<Tuple<Product, Integer>> products) {
+    public void setProducts(List<Pair<Product, Integer>> products) {
         this.products = products;
     }
 

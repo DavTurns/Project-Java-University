@@ -54,8 +54,26 @@ public class UI {
                     9.Show all Products
                     10.Show all Orders
                     
+                    Locations
+                    11.Add new Location
+                    12.Close Location
+                    13.Delete Location
+                    14.Add Employee to Location
+                    15.Fire Employee from Location
+                    16.Set Manager to Location
+                    
+                    Events
+                    17.Add Event
+                    18.Delete Event
+                    19.Show all Events
+                    
+                    Employee
+                    20.Add Employee
+                    21.Delete Employee
+                    
+                    
                 """);
-
+        //TODO: Add Customer and Employee methods
         System.out.println("Input:");
         return scanner.nextLine();
     }

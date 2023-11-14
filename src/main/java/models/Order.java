@@ -1,6 +1,8 @@
 package models;
 
-import java.util.InputMismatchException;
+import interfaces.Idmethods;
+import org.apache.commons.lang3.tuple.Pair;
+
 import java.util.List;
 
 public class Order implements Idmethods {
@@ -14,7 +16,8 @@ public class Order implements Idmethods {
                 "\n" + productsString + '\'' +
                 "\ntotalPrice: " + totalPrice;
     }
-
+    //TODO Do it with List
+    private List<Pair<Product,Integer>> products;
     private String productsString;
     private float totalPrice;
     private int locationId;

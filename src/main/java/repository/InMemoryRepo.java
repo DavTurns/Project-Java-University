@@ -1,6 +1,6 @@
 package repository;
 
-import models.Idmethods;
+import interfaces.Idmethods;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -12,10 +12,15 @@ public class InMemoryRepo<T extends Idmethods> implements RepoInterface<T> {
     @Override
     public void create(T item) {
         // Assign a unique identifier
-
-        item.setId(nextId++);
-
-
+        //verify if assigned id is already taken
+        for(T t: data){
+            if(t.getId() == item.getId()){
+                item.setId(nextId++);
+                data.add(item);
+                return;
+            }
+        }
+        //else add item with original id
         data.add(item);
     }
 

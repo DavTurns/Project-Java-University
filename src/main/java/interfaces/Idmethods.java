@@ -1,4 +1,4 @@
-package models;
+package interfaces;
 
 public interface Idmethods {
     public int getId();

@@ -1,13 +1,24 @@
 package models;
 
-public class Manager extends Person{
+import interfaces.Idmethods;
+
+public class Manager extends Person implements Idmethods {
 
     private int locationId;
-
+    private boolean employed;
     private float salary;
-    public Manager(int id, String firstname, String lastname, String adress, float salary, int locationId) {
+
+    public boolean isEmployed() {
+        return employed;
+    }
+
+    public void setEmployed(boolean employed) {
+        this.employed = employed;
+    }
+
+    public Manager(int id, String firstname, String lastname, String adress, boolean employed, float salary) {
         super(id, firstname, lastname, adress);
-        this.locationId = locationId;
+        this.employed = employed;
         this.salary = salary;
     }
 

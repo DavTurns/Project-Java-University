@@ -5,29 +5,29 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a91c0b1c-5521-4037-8e65-f2c66b19cc83" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/controller/Controller.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/models/Customer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/models/Delivery.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/models/Drink.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/models/Employee.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/models/Food.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/models/Idmethods.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/models/Location.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/models/Manager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/models/Order.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/models/Person.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/models/Product.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/models/Tuple.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/repository/InMemoryRepo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/repository/RepoInterface.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ui/UI.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/ControllerTests.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/InMemoryRepoTests.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../json_reader_basic/src/main/java/org/example/Statistics.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lab/Lab1/src/TestRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Lab/Lab1/src/TestRunner.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lab/Lab1/src/ex4/ElectronicsStoreTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Lab/Lab1/src/ex4/ElectronicsStoreTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Seminar2/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Seminar2/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/interfaces/Customer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/models/CustomerFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/models/Event.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/models/LoyalCustomer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/models/OnlineOrder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/models/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/SimpleCustomer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/models/Delivery.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/Delivery.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/models/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/Employee.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/models/Idmethods.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/interfaces/Idmethods.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/models/Location.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/Location.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/models/Manager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/Manager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/models/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/Order.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/models/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/Product.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/models/Tuple.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/repository/InMemoryRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/repository/InMemoryRepo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ui/UI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ui/UI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ControllerTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ControllerTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,7 +43,7 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 0
@@ -62,7 +62,7 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Latitude/Desktop/github_repositories/Coffeeshop-Java-University/.idea&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Latitude/Desktop/github_repositories/Coffeeshop-Java-University&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -76,20 +76,63 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager" selected="Application.Main">
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Main" />
-      <module name="Coffeeshop-Java-University" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="JUnit.ControllerTest">
     <configuration name="ControllerTest" type="JUnit" factoryName="JUnit">
       <module name="Coffeeshop-Java-University" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="ControllerTests" />
       <option name="METHOD_NAME" value="" />
       <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ControllerTests.testAddNewLocation" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Coffeeshop-Java-University" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="ControllerTests" />
+      <option name="METHOD_NAME" value="testAddNewLocation" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ControllerTests.testCloseLocation" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Coffeeshop-Java-University" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="ControllerTests" />
+      <option name="METHOD_NAME" value="testCloseLocation" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ControllerTests.testCreateManager" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Coffeeshop-Java-University" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="ControllerTests" />
+      <option name="METHOD_NAME" value="testCreateManager" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ControllerTests.testGetIntInput_ValidInput_WithValidator" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Coffeeshop-Java-University" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="ControllerTests" />
+      <option name="METHOD_NAME" value="testGetIntInput_ValidInput_WithValidator" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ControllerTests.testGetIntInput_ValidInput_WithoutValidator" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Coffeeshop-Java-University" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="ControllerTests" />
+      <option name="METHOD_NAME" value="testGetIntInput_ValidInput_WithoutValidator" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -107,13 +150,21 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.Main" />
       <item itemvalue="JUnit.InMemoryRepoTests" />
       <item itemvalue="JUnit.ControllerTest" />
+      <item itemvalue="JUnit.ControllerTests.testAddNewLocation" />
+      <item itemvalue="JUnit.ControllerTests.testCloseLocation" />
+      <item itemvalue="JUnit.ControllerTests.testCreateManager" />
+      <item itemvalue="JUnit.ControllerTests.testGetIntInput_ValidInput_WithoutValidator" />
+      <item itemvalue="JUnit.ControllerTests.testGetIntInput_ValidInput_WithValidator" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Main" />
+        <item itemvalue="JUnit.ControllerTests.testCloseLocation" />
+        <item itemvalue="JUnit.ControllerTests.testCreateManager" />
+        <item itemvalue="JUnit.ControllerTests.testAddNewLocation" />
+        <item itemvalue="JUnit.ControllerTests.testGetIntInput_ValidInput_WithoutValidator" />
+        <item itemvalue="JUnit.ControllerTests.testGetIntInput_ValidInput_WithValidator" />
       </list>
     </recent_temporary>
   </component>
@@ -130,11 +181,29 @@
       <workItem from="1698476950650" duration="21576000" />
       <workItem from="1698648479469" duration="11101000" />
       <workItem from="1698659857056" duration="1029000" />
+      <workItem from="1698675182939" duration="5031000" />
+      <workItem from="1698750914299" duration="652000" />
+      <workItem from="1699020543861" duration="6172000" />
+      <workItem from="1699197144672" duration="16456000" />
+      <workItem from="1699517895506" duration="721000" />
+      <workItem from="1699620680925" duration="13508000" />
+      <workItem from="1699885586878" duration="9673000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -143,6 +212,41 @@
           <url>file://$PROJECT_DIR$/src/main/java/org/example/Main.java</url>
           <line>15</line>
           <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/ControllerTests.java</url>
+          <line>74</line>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/ControllerTests.java</url>
+          <line>131</line>
+          <option name="timeStamp" value="17" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/ControllerTests.java</url>
+          <line>159</line>
+          <option name="timeStamp" value="20" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/models/Location.java</url>
+          <line>42</line>
+          <option name="timeStamp" value="21" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/ControllerTests.java</url>
+          <line>150</line>
+          <option name="timeStamp" value="23" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/controller/Controller.java</url>
+          <line>321</line>
+          <option name="timeStamp" value="24" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/controller/Controller.java</url>
+          <line>301</line>
+          <option name="timeStamp" value="25" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

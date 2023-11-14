@@ -1,5 +1,7 @@
 package models;
 
+import interfaces.Idmethods;
+
 public abstract class Product implements Idmethods {
 
     protected int id;

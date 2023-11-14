@@ -1,14 +1,11 @@
 package models;
 
-import java.util.List;
+import interfaces.Customer;
 
-public class Customer extends Person{
+public class SimpleCustomer extends Person implements Customer {
 
-    private List<Order> orders;
-
-    public Customer(int id, String firstname, String lastname, String adress, List<Order> orders) {
+    public SimpleCustomer(int id, String firstname, String lastname, String adress) {
         super(id, firstname, lastname, adress);
-        this.orders = orders;
     }
 
     @Override
@@ -20,4 +17,12 @@ public class Customer extends Person{
                 ", adress='" + adress + '\'' +
                 '}';
     }
+
+    @Override
+    public int getFidelityPoints() {
+        return 0;
+    }
+
+    @Override
+    public void setFidelityPoints(int points) throws Exception {}
 }

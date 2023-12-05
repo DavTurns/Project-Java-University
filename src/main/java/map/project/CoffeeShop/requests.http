@@ -1,0 +1,9 @@
+POST localhost:8080/products/create
+Content-Type: application/json
+
+{
+  "name": "habarnam",
+  "price":  30,
+  "size": 69,
+  "unit": "g"
+}

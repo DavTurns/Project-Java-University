@@ -1,9 +1,18 @@
-POST localhost:8080/products/create
+POST localhost:8080/onlineorder/create
 Content-Type: application/json
 
 {
-  "name": "habarnam",
-  "price":  30,
-  "size": 69,
-  "unit": "g"
+  "location": {
+    "id": 1
+  },
+  "customer": {
+    "id": 1
+  },
+  "date_time": "2023-12-07",
+  "delivery_address": "blabla",
+  "delivery_man": "man"
 }
+
+
+
+

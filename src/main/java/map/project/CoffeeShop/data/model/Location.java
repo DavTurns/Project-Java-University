@@ -17,15 +17,16 @@ public class Location {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
 
+    /*
     @OneToOne
     private Manager manager;
-
-    private String Name;
-    private String lastName;
+*/
+    private String name;
     private String address;
-    private boolean isActive;
+    private boolean active;
 
+    /*
     @OneToMany
     private List<Employee> employees;
-
+*/
 }

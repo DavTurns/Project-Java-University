@@ -9,8 +9,7 @@ import lombok.ToString;
 //@EqualsAndHashCode(exclude = "post")
 @Entity
 @Table(name="products")
-@Inheritance(strategy = InheritanceType.SINGLE_TABLE)
-@DiscriminatorColumn(name="unit",discriminatorType = DiscriminatorType.STRING)
+
 public class Product {
 
     @Id
@@ -22,4 +21,6 @@ public class Product {
     private float price;
 
     private int size;
+
+    private String unit;
 }

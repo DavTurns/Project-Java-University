@@ -1,18 +1,16 @@
 package map.project.CoffeeShop.data.model;
+import org.springframework.beans.factory.annotation.Value;
 import jakarta.persistence.*;
 import lombok.Data;
-import lombok.EqualsAndHashCode;
-import lombok.ToString;
+
 
 @Data
-//@ToString(exclude = "post")
-//@EqualsAndHashCode(exclude = "post")
 @Entity
 @Table(name = "customer")
 public class Customer {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
     private String firstName;

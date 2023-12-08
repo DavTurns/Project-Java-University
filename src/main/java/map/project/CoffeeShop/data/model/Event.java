@@ -1,4 +1,5 @@
 package map.project.CoffeeShop.data.model;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.*;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
@@ -10,12 +11,13 @@ import lombok.ToString;
 @Entity
 @Table(name = "event")
 public class Event {
-
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
     @ManyToOne
+    @JoinColumn(name = "locationId")
+    @JsonIgnoreProperties("events")
     private Location location;
 
     private String name;

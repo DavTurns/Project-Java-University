@@ -1,4 +1,6 @@
 package map.project.CoffeeShop.data.model;
+import com.fasterxml.jackson.annotation.JsonAutoDetect;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.*;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
@@ -14,19 +16,25 @@ import java.util.List;
 public class Location {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
-    /*
-    @OneToOne
+    @OneToOne(mappedBy = "location", cascade = CascadeType.DETACH)
+    @JsonIgnoreProperties("location") //to not create an infinite loop while serializing to JSON
     private Manager manager;
-*/
+
     private String name;
+
     private String address;
+
     private boolean active;
 
-    /*
-    @OneToMany
+    @OneToMany(mappedBy = "location", cascade = CascadeType.DETACH)
+    @JsonIgnoreProperties("location") //to not create an infinite loop while serializing to JSON
     private List<Employee> employees;
-*/
+
+    @OneToMany(mappedBy = "location", cascade = CascadeType.DETACH)
+    @JsonIgnoreProperties("location") //to not create an infinite loop while serializing to JSON
+    private List<Event> events;
+
 }

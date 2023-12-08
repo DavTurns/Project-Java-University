@@ -1,0 +1,33 @@
+POST localhost:8080/employee/create
+Content-Type: application/json
+
+{
+  "firstName": "Daniel",
+  "lastName": "Svistea",
+  "address": "testaddr2",
+  "salary": 100000.0,
+  "title": "bodyguard"
+}
+
+GET localhost:8080/employee/getAll
+
+GET localhost:8080/employee/create
+
+
+
+DELETE localhost:8080/employee/delete/2
+
+POST localhost:8080/employee/create
+Content-Type: application/json
+
+{
+  "firstName": "Maria",
+  "lastName": "Tentea",
+  "address": "testaddr2",
+  "salary": 100000.0,
+  "title": "BOSS"
+}
+
+PUT localhost:8080/location/addEmployee/1/3
+
+

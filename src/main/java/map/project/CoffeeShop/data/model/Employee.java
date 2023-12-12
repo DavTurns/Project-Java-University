@@ -4,10 +4,9 @@ import jakarta.persistence.*;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.ToString;
+import org.springframework.context.ApplicationListener;
 
 @Data
-//@ToString(exclude = "post")
-//@EqualsAndHashCode(exclude = "post")
 @Entity
 @Table(name = "employee")
 public class Employee {
@@ -26,4 +25,6 @@ public class Employee {
     private String address;
     private float salary;
     private String title;
+
+
 }

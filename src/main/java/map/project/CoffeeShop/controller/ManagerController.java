@@ -2,6 +2,8 @@ package map.project.CoffeeShop.controller;
 
 import map.project.CoffeeShop.data.model.Manager;
 import map.project.CoffeeShop.service.ManagerService;
+import map.project.CoffeeShop.service.ManagerServiceInterface;
+import map.project.CoffeeShop.service.SpecialManagerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -11,10 +13,10 @@ import java.util.List;
 @RequestMapping("/manager")
 public class ManagerController {
 
-    private final ManagerService managerService;
+    private final SpecialManagerService managerService;
 
     @Autowired
-    public ManagerController(ManagerService managerService) {
+    public ManagerController(SpecialManagerService managerService) {
         this.managerService = managerService;
     }
 

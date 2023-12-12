@@ -1,16 +1,55 @@
-POST localhost:8080/onlineorder/create
+POST localhost:8080/customer/create
+Content-Type: application/json
+
+{
+
+  "firstName": "Mr",
+  "lastName": "W" ,
+  "address": "123add"
+}
+
+POST localhost:8080/createOrder
+Content-Type: application/json
+
+{
+"location": {
+"id": 1
+},
+
+"dateTime": "2023-12-07",
+"deliveryAddress": "blabla",
+"deliveryMan": "man"
+}
+
+
+DELETE localhost:8080/location/delete/1
+
+POST localhost:8080/manager/create
 Content-Type: application/json
 
 {
   "location": {
     "id": 1
   },
-  "customer": {
+
+
+  "firstName": "Mr",
+  "lastName": "W" ,
+  "address": "123add",
+  "salary": 20000
+}
+
+POST localhost:8080/createOrder
+Content-Type: application/json
+
+{
+  "location": {
     "id": 1
   },
-  "date_time": "2023-12-07",
-  "delivery_address": "blabla",
-  "delivery_man": "man"
+
+  "dateTime": "2023-12-07",
+  "deliveryAddress": "blabla",
+  "deliveryMan": "man"
 }
 
 

@@ -13,13 +13,20 @@ import java.util.List;
 @DiscriminatorColumn(name = "order_type", discriminatorType = DiscriminatorType.STRING)
 @Table(name = "orders")
 public class Order {
-
+/*
+    public Order() {}
+    public Order(OrderData orderData) {
+        this.id = orderData.getId();
+        this.date_time = orderData.getDateTime();
+        this.location = orderData.getLocation();
+        this.customer = orderData.getCustomer();
+    }
+*/
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
     private String date_time;
-
 
     @ManyToOne
     @JoinColumn(name = "location")

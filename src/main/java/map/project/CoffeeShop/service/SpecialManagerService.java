@@ -1,5 +1,9 @@
 package map.project.CoffeeShop.service;
 
+import map.project.CoffeeShop.data.model.Manager;
+
+import java.util.List;
+
 import jakarta.transaction.Transactional;
 import lombok.extern.slf4j.Slf4j;
 import map.project.CoffeeShop.data.model.Manager;
@@ -14,31 +18,30 @@ import java.util.List;
 @Slf4j
 @Service
 @Transactional
-public class ManagerService implements ManagerServiceInterface {
+public class SpecialManagerService implements ManagerServiceInterface{
 
     @Autowired
-    private ManagerDBRepo managerRepo;
+    private ManagerService managerService;
 
+    @Override
     public Manager save(Manager manager) {
-
-        if (!Validators.validateName(manager.getFirstName())) {
-            log.error("Invalid name");
-            throw new IllegalArgumentException("Invalid name");
-        }
-
-        return managerRepo.save(manager);
+        if(manager.getSalary() > 10000)
+            return managerService.save(manager);
+        else return null;
     }
 
+    @Override
     public List<Manager> getAll() {
-        return managerRepo.findAll();
-    }
-    public Manager findById(int id) {
-        return managerRepo.findById((long) id).orElse(null);
+        return managerService.getAll();
     }
 
+    @Override
+    public Manager findById(int id) {
+        return managerService.findById(id);
+    }
+
+    @Override
     public void delete(int id) {
-        if(managerRepo.existsById((long) id)){
-            managerRepo.delete(findById(id));
-        } else throw new IllegalArgumentException("Manager doesnt exist");
+        managerService.delete(id);
     }
 }

@@ -139,7 +139,11 @@ public class LocationService {
                 .orElseThrow(() -> new IllegalArgumentException("Location not found"));
         return location;
     }
-    // QUESTION
+
+
+    public void delete(int id){
+        locationRepo.deleteById(Long.valueOf(id));
+    }
 
 
 

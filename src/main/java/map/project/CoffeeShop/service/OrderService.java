@@ -20,9 +20,9 @@ public class OrderService {
     @Autowired
     private OrderDBRepo orderRepo;
 
-    public Order save(Order order) {
+    public Optional<Order> save(Order order) {
         //TODO Validate Date-time!!!!! + Location + Customer !!!!
-        return orderRepo.save(order);
+        return Optional.of(orderRepo.save(order));
     }
 
     public List<Order> findAll() {

@@ -1,4 +1,6 @@
 package map.project.CoffeeShop.service;
+import map.project.CoffeeShop.data.repository.CustomerRepository;
+import map.project.CoffeeShop.data.repository.InMemoryRepoCustomer;
 import org.springframework.beans.factory.annotation.Value;
 import jakarta.transaction.Transactional;
 import lombok.extern.slf4j.Slf4j;
@@ -16,8 +18,9 @@ import java.util.Optional;
 @Transactional
 public class CustomerService {
 
-    @Autowired
-    private CustomerDBRepo customerRepo;
+
+
+    private CustomerRepository customerRepo = new InMemoryRepoCustomer();
 
     public Customer save(Customer customer) {
 

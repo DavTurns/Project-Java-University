@@ -6,9 +6,14 @@ import lombok.Data;
 @DiscriminatorValue("OnlineOrder")
 @Data
 public class OnlineOrder extends Order{
+
+    /*
+    public OnlineOrder(OrderData orderData) {
+        super(orderData);
+        this.delivery_address = orderData.;
+    }
+     */
+
     private String delivery_address;
-
     private String delivery_man;
-
-
 }

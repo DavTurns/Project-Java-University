@@ -1,11 +1,11 @@
 CREATE TABLE `products` (
                             `id` int NOT NULL AUTO_INCREMENT,
-                            `name` varchar(45) NOT NULL,
-                            `price` float NOT NULL,
-                            `size` int NOT NULL,
-                            `unit` varchar(45) NOT NULL,
+                            `name` varchar(20) DEFAULT NULL,
+                            `price` float DEFAULT NULL,
+                            `size` int DEFAULT NULL,
+                            `unit` varchar(10) DEFAULT NULL,
                             PRIMARY KEY (`id`)
-);
+)
 
 CREATE TABLE coffeeshop.location (
                                      `id` int NOT NULL AUTO_INCREMENT,
@@ -52,3 +52,23 @@ CREATE TABLE coffeeshop.Event (
                                   FOREIGN KEY (location_id) REFERENCES coffeeshop.location(id),
                                   PRIMARY KEY (`id`)
 );
+
+CREATE TABLE coffeeshop.orders(
+                                  id INT auto_increment PRIMARY KEY,
+                                  date_time VARCHAR(20),
+                                  location int,
+                                  customer int,
+                                  order_type varchar(30),
+                                  delivery_address varchar(20),
+                                  delivery_man varchar(20),
+                                  foreign key (location) references coffeeshop.location(id),
+                                  foreign key (customer) references coffeeshop.customer(id)
+);
+
+CREATE TABLE `customer` (
+                            `id` int NOT NULL AUTO_INCREMENT,
+                            `first_name` varchar(20) DEFAULT NULL,
+                            `last_name` varchar(20) DEFAULT NULL,
+                            `address` varchar(20) DEFAULT NULL,
+                            PRIMARY KEY (`id`)
+)

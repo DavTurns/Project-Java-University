@@ -51,11 +51,10 @@ public class LocationController {
     public Location findLocationById(@PathVariable("locationId") int locationId) {
         return locationService.findLocationById(locationId);
     }
-/*
+
     @DeleteMapping("delete/{locationId}")
-    public Location deleteLocation(@PathVariable("locationId") int locationId) {
-        return locationService.delete(locationId);
+    public void deleteLocation(@PathVariable("locationId") int locationId) {
+        locationService.delete(locationId);
     }
 
- */
 }

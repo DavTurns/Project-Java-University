@@ -5,12 +5,12 @@ import jakarta.persistence.*;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.ToString;
+import org.springframework.context.ApplicationEvent;
 
 import java.util.List;
 
 @Data
-//@ToString(exclude = "post")
-//@EqualsAndHashCode(exclude = "post")
+
 @Entity
 @Table(name = "location")
 public class Location {
@@ -19,7 +19,7 @@ public class Location {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
-    @OneToOne(mappedBy = "location", cascade = CascadeType.DETACH)
+    @OneToOne(mappedBy = "location", cascade = CascadeType.REMOVE)
     @JsonIgnoreProperties("location") //to not create an infinite loop while serializing to JSON
     private Manager manager;
 
@@ -29,9 +29,13 @@ public class Location {
 
     private boolean active;
 
-    @OneToMany(mappedBy = "location", cascade = CascadeType.DETACH)
+    @OneToMany(mappedBy = "location", cascade = CascadeType.REMOVE)
     @JsonIgnoreProperties("location") //to not create an infinite loop while serializing to JSON
     private List<Employee> employees;
+
+    @OneToMany(mappedBy = "location", cascade = CascadeType.REMOVE)
+    @JsonIgnoreProperties("location") //to not create an infinite loop while serializing to JSON
+    private List<Order> orders;
 
     @OneToMany(mappedBy = "location", cascade = CascadeType.DETACH)
     @JsonIgnoreProperties("location") //to not create an infinite loop while serializing to JSON

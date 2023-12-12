@@ -17,9 +17,9 @@ public class OnlineOrderService {
     @Autowired
     private OnlineOrderDBRepo onlineOrderDBRepo;
 
-    public OnlineOrder save(OnlineOrder order) {
+    public Optional<OnlineOrder> save(OnlineOrder order) {
         //TODO Validate Date-time!!!!! + Location + Customer !!!!
-        return onlineOrderDBRepo.save(order);
+        return Optional.of(onlineOrderDBRepo.save(order));
     }
 
     public List<OnlineOrder> findAll() {

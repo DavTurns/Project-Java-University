@@ -1,13 +1,10 @@
 package map.project.CoffeeShop.service;
-import map.project.CoffeeShop.data.repository.CustomerRepository;
-import map.project.CoffeeShop.data.repository.InMemoryRepoCustomer;
-import org.springframework.beans.factory.annotation.Value;
 import jakarta.transaction.Transactional;
 import lombok.extern.slf4j.Slf4j;
 import map.project.CoffeeShop.data.model.Customer;
 import map.project.CoffeeShop.data.repository.CustomerDBRepo;
+import map.project.CoffeeShop.data.repository.CustomerRepository;
 import map.project.CoffeeShop.util.Validators;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -20,7 +17,11 @@ public class CustomerService {
 
 
 
-    private CustomerRepository customerRepo = new InMemoryRepoCustomer();
+    private final CustomerRepository customerRepo;
+
+    public CustomerService(CustomerRepository customerRepo) {
+        this.customerRepo = customerRepo;
+    }
 
     public Customer save(Customer customer) {
 

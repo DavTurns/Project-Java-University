@@ -1,16 +1,23 @@
 package map.project.CoffeeShop.data.repository;
 
 import map.project.CoffeeShop.data.model.Customer;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
+@Repository
 public class CustomerInMemoryRepo implements CustomerRepository{
+
+
     private List<Customer> customers = new ArrayList<Customer>();
+    private int nextId = 1;
 
     @Override
     public Customer save(Customer customer) {
+        customer.setId(nextId++);
         customers.add(customer);
         return customer;
     }

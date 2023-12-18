@@ -1,5 +1,7 @@
 package map.project.CoffeeShop;
 
+import map.project.CoffeeShop.data.repository.CustomerDBRepo;
+import map.project.CoffeeShop.data.repository.CustomerInMemoryRepo;
 import map.project.CoffeeShop.data.repository.CustomerRepository;
 import map.project.CoffeeShop.service.CustomerService;
 import org.springframework.boot.SpringApplication;
@@ -13,9 +15,12 @@ public class CoffeeShopApplication {
 		SpringApplication.run(CoffeeShopApplication.class, args);
 	}
 
-	@Bean
-	public CustomerService customerServiceDB(CustomerRepository customerRepository) {
+
+	/*@Bean
+	public CustomerService customerServiceDB(CustomerDBRepo customerRepository) {
 		return new CustomerService(customerRepository);
 	}
+
+	 */
 
 }

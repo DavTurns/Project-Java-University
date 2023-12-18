@@ -38,5 +38,13 @@ public class Order {
     @JsonIgnoreProperties("orders")
     private Customer customer;
 
+    @ManyToMany(cascade = { CascadeType.ALL })
+    @JoinTable(
+            name = "order_products",
+            joinColumns = @JoinColumn(name = "orderid"),
+            inverseJoinColumns = @JoinColumn(name = "productid")
+    )
+    private List<Product> products;
+
 
 }

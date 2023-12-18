@@ -1,12 +1,25 @@
-POST localhost:8080/customer/create
+POST localhost:8080/order_products/create
 Content-Type: application/json
 
 {
+  "order": {
+    "id": 1
+  },
 
-  "firstName": "Mr",
-  "lastName": "W" ,
-  "address": "123add"
+  "product": {
+    "id": 3
+
+  },
+  "quantity": 2,
+  "price_per_unit": 10
+
 }
+
+
+
+
+GET localhost:8080/customer/1
+
 
 POST localhost:8080/createOrder
 Content-Type: application/json

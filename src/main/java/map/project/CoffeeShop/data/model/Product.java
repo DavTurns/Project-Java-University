@@ -4,6 +4,8 @@ import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.ToString;
 
+import java.util.List;
+
 @Data
 //@ToString(exclude = "post")
 //@EqualsAndHashCode(exclude = "post")
@@ -23,4 +25,7 @@ public class Product {
     private int size;
 
     private String unit;
+
+    @ManyToMany(mappedBy = "products")
+    private List<Order> orders;
 }

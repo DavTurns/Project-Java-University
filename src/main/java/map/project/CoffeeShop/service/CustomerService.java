@@ -5,6 +5,7 @@ import map.project.CoffeeShop.data.model.Customer;
 import map.project.CoffeeShop.data.repository.CustomerDBRepo;
 import map.project.CoffeeShop.data.repository.CustomerRepository;
 import map.project.CoffeeShop.util.Validators;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -19,7 +20,7 @@ public class CustomerService {
 
     private final CustomerRepository customerRepo;
 
-    public CustomerService(CustomerRepository customerRepo) {
+    public CustomerService(@Qualifier("customerInMemoryRepo") CustomerRepository customerRepo) {
         this.customerRepo = customerRepo;
     }
 

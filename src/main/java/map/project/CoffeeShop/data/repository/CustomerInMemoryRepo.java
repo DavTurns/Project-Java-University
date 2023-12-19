@@ -39,7 +39,7 @@ public class CustomerInMemoryRepo implements CustomerRepository{
 
     @Override
     public void deleteById(int id) {
-        customers.remove(id);
+        customers.removeIf(customer -> customer.getId() == id);
 
     }
 }

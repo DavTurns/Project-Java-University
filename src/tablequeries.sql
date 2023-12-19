@@ -65,6 +65,15 @@ CREATE TABLE coffeeshop.orders(
                                   foreign key (customer) references coffeeshop.customer(id)
 );
 
+Create Table coffeeshop.order_products(
+                                          id INT auto_increment primary key,
+                                          order_id int,
+                                          product_id int,
+                                          quantity int,
+                                          foreign key (order_id) references coffeeshop.orders(id),
+                                          foreign key (product_id) references coffeeshop.products(id)
+);
+
 CREATE TABLE `customer` (
                             `id` int NOT NULL AUTO_INCREMENT,
                             `first_name` varchar(20) DEFAULT NULL,

@@ -35,7 +35,6 @@ public class OrderFactoryTest {
         assertEquals(l.isActive(), returnedOrder.getLocation().isActive());
         assertEquals(customer.getId(),returnedOrder.getCustomer().getId());
         assertEquals(customer.getFirstName(),returnedOrder.getCustomer().getFirstName());
-
     }
 
     @Test

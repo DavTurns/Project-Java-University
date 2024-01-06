@@ -24,20 +24,36 @@ public class ProductController {
     public Product create(@RequestBody Product product) {
         //System.out.println(student.getName()+Integer.toString(student.getAge()));
         return productService.save(product);
-
     }
+
     @GetMapping("/food/all")
     public List<Product> getAllFood() {
-        List<Product> products = productService.findAll();
-        return  products.stream().filter(x -> x.getUnit().equals("g"))
-                .collect(Collectors.toList());
+        return  productService.getAllFood();
     }
 
     @GetMapping("/drinks/all")
     public List<Product> getAllDrinks() {
-        List<Product> products = productService.findAll();
-        return  products.stream().filter(x -> x.getUnit().equals("ml"))
-                .collect(Collectors.toList());
+        return productService.getAllDrinks();
+    }
+
+    @GetMapping("/drinks/sortByPrice/asc")
+    public List<Product> sortDrinksByPriceASC() {
+        return productService.sortDrinksByPriceASC();
+    }
+
+    @GetMapping("/food/sortByPrice/asc")
+    public List<Product> sortFoodByPriceASC() {
+        return productService.sortFoodByPriceASC();
+    }
+
+    @GetMapping("/drinks/sortByPrice/desc")
+    public List<Product> sortDrinksByPriceDESC() {
+        return productService.sortDrinksByPriceDESC();
+    }
+
+    @GetMapping("/food/sortByPrice/desc")
+    public List<Product> sortFoodByPriceDESC() {
+        return productService.sortFoodByPriceDESC();
     }
 
     @GetMapping("/all")

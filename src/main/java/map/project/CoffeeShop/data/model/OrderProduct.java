@@ -22,6 +22,4 @@ public class OrderProduct {
     private Product product;
 
     private int quantity;
-
-    private int price_per_unit;
 }

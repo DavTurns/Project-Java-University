@@ -1,4 +1,5 @@
 package map.project.CoffeeShop.data.model;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
@@ -26,6 +27,10 @@ public class Product {
 
     private String unit;
 
-    @ManyToMany(mappedBy = "products")
+    @JsonIgnore
+    @ToString.Exclude
+    @EqualsAndHashCode.Exclude
+    @ManyToMany(mappedBy = "products",cascade = CascadeType.ALL)
     private List<Order> orders;
+
 }

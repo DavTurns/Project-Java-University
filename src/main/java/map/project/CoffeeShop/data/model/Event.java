@@ -17,7 +17,7 @@ public class Event {
 
     @ManyToOne
     @JoinColumn(name = "locationId")
-    @JsonIgnoreProperties("events")
+    @JsonIgnoreProperties({"manager", "orders", "employees", "events"})
     private Location location;
 
     private String name;

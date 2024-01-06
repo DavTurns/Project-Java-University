@@ -3,7 +3,6 @@ package map.project.CoffeeShop.service;
 import jakarta.transaction.Transactional;
 import lombok.extern.slf4j.Slf4j;
 import map.project.CoffeeShop.data.model.Employee;
-import map.project.CoffeeShop.data.model.Food;
 import map.project.CoffeeShop.data.model.Location;
 import map.project.CoffeeShop.data.model.Manager;
 import map.project.CoffeeShop.data.repository.EmployeeDBRepo;

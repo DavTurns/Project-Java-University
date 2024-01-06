@@ -18,7 +18,7 @@ public class OrderController {
     }
 
 
-    //@PostMapping("/create")
+    @PostMapping("/create")
     public Optional<Order> create(@RequestBody Order order) {
         return orderService.save(order);
     }
@@ -36,6 +36,16 @@ public class OrderController {
     @DeleteMapping("/{id}")
     public void deleteById(@PathVariable int id) {
         orderService.deleteById(id);
+    }
+
+    @GetMapping(path = "/getTotalPrice/{id}")
+    public String getOrderTotalPriceByID(@PathVariable("id") int id){
+        return orderService.getOrderTotalPriceById(id);
+    }
+
+    @PutMapping("/addProduct/{orderId}/{productId}/{count}")
+    public Order addProduct(@PathVariable("orderId") int orderId, @PathVariable("productId") int productId, @PathVariable("count") int count){
+        return orderService.addProduct(orderId, productId, count);
     }
 
 }

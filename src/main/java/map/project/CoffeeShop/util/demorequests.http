@@ -1,0 +1,62 @@
+GET localhost:8080/order/getTotalPrice/3
+
+
+PUT localhost:8080/order/addProduct/5/4/3
+
+DELETE localhost:8080/event/delete/3
+
+GET localhost:8080/event/getAll
+
+PUT localhost:8080/event/setLocation/1/2
+
+GET localhost:8080/products/food/sortByPrice/desc
+
+PUT localhost:8080/order/addProduct/5/3/2
+
+POST localhost:8080/order/create
+Content-Type: application/json
+
+{
+  "date_time": "2023-12-20.19-16",
+  "location" : {
+    "id" : 2
+  }
+}
+
+
+
+
+GET localhost:8080/order_products/all
+
+
+
+GET localhost:8080/products/all
+
+
+
+
+
+PUT localhost:8080/location/setManager/2/1
+
+POST localhost:8080/location/create
+Content-Type: application/json
+
+{
+  "name": "Cluj",
+  "address": "testaddr",
+  "active": true
+}
+
+POST localhost:8080/manager/create
+Content-Type: application/json
+
+{
+  "firstName": "David",
+  "lastName": "Svistea",
+  "address": "addrOfDavid",
+  "salary": 10000
+}
+
+
+
+

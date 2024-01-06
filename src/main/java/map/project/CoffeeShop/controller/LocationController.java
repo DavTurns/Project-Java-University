@@ -16,7 +16,6 @@ public class LocationController {
         this.locationService = locationService;
     }
 
-
     @PostMapping("/create")
     public Location create(@RequestBody Location location) {
         return locationService.save(location);
@@ -47,7 +46,7 @@ public class LocationController {
         return locationService.closeLocation(locationId);
     }
 
-    @PutMapping("/{locationId}")
+    @GetMapping("/{locationId}")
     public Location findLocationById(@PathVariable("locationId") int locationId) {
         return locationService.findLocationById(locationId);
     }

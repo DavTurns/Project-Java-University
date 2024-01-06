@@ -18,11 +18,18 @@ public class OrderProductController {
         this.orderProductService = orderProductService;
     }
 
-
     @PostMapping("/create")
     public OrderProduct create(@RequestBody OrderProduct op) {
-        return orderProductService.save(op);
 
+        /*
+        List<OrderProduct> allOrderProducts = getAll();
+        for(OrderProduct op2: allOrderProducts){
+            if(op2.getId() == op.getId()){
+                op.
+            }
+        }
+        */
+        return orderProductService.save(op);
     }
 
     @GetMapping("/all")

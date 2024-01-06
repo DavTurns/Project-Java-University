@@ -1,17 +1,17 @@
 CREATE TABLE `products` (
                             `id` int NOT NULL AUTO_INCREMENT,
-                            `name` varchar(20) DEFAULT NULL,
-                            `price` float DEFAULT NULL,
-                            `size` int DEFAULT NULL,
-                            `unit` varchar(10) DEFAULT NULL,
+                            `name` varchar(20) NOT NULL,
+                            `price` float NOT NULL,
+                            `size` int NOT NULL,
+                            `unit` varchar(10) NOT NULL,
                             PRIMARY KEY (`id`)
-)
+);
 
 CREATE TABLE coffeeshop.location (
                                      `id` int NOT NULL AUTO_INCREMENT,
-                                     name VARCHAR(64),
-                                     address VARCHAR(128),
-                                     active BIT,
+                                     name VARCHAR(64) NOT NULL,
+                                     address VARCHAR(128) NOT NULL,
+                                     active BIT NOT NULL,
                                      PRIMARY KEY (`id`)
 );
 
@@ -19,8 +19,8 @@ Drop TABLE coffeeshop.Location;
 
 CREATE TABLE coffeeshop.Employee (
                                      `id` int NOT NULL AUTO_INCREMENT,
-                                     first_name VARCHAR(64),
-                                     last_name VARCHAR(64),
+                                     first_name VARCHAR(64) NOT NULL,
+                                     last_name VARCHAR(64) NOT NULL,
                                      address VARCHAR(128),
 
                                      salary FLOAT,
@@ -34,8 +34,8 @@ DROP TABLE coffeeshop.Employee;
 
 CREATE TABLE coffeeshop.Manager (
                                     `id` int NOT NULL AUTO_INCREMENT,
-                                    first_name VARCHAR(64),
-                                    last_name VARCHAR(64),
+                                    first_name VARCHAR(64) NOT NULL,
+                                    last_name VARCHAR(64) NOT NULL,
                                     address VARCHAR(128),
                                     salary FLOAT,
                                     location_id INT,
@@ -46,7 +46,7 @@ CREATE TABLE coffeeshop.Manager (
 CREATE TABLE coffeeshop.Event (
                                   `id` int NOT NULL AUTO_INCREMENT,
                                   name VARCHAR(64),
-                                  host VARCHAR(64),
+                                  host VARCHAR(64) NOT NULL,
                                   profit FLOAT,
                                   location_id INT,
                                   FOREIGN KEY (location_id) REFERENCES coffeeshop.location(id),
@@ -56,7 +56,7 @@ CREATE TABLE coffeeshop.Event (
 CREATE TABLE coffeeshop.orders(
                                   id INT auto_increment PRIMARY KEY,
                                   date_time VARCHAR(20),
-                                  location int,
+                                  location int not null ,
                                   customer int,
                                   order_type varchar(30),
                                   delivery_address varchar(20),
@@ -67,17 +67,17 @@ CREATE TABLE coffeeshop.orders(
 
 Create Table coffeeshop.order_products(
                                           id INT auto_increment primary key,
-                                          order_id int,
-                                          product_id int,
-                                          quantity int,
+                                          order_id int NOT NULL,
+                                          product_id int NOT NULL,
+                                          quantity int NOT NULL,
                                           foreign key (order_id) references coffeeshop.orders(id),
                                           foreign key (product_id) references coffeeshop.products(id)
 );
 
 CREATE TABLE `customer` (
                             `id` int NOT NULL AUTO_INCREMENT,
-                            `first_name` varchar(20) DEFAULT NULL,
-                            `last_name` varchar(20) DEFAULT NULL,
-                            `address` varchar(20) DEFAULT NULL,
+                            `first_name` varchar(20) NOT NULL,
+                            `last_name` varchar(20) NOT NULL,
+                            `address` varchar(20) NOT NULL,
                             PRIMARY KEY (`id`)
-)
+);

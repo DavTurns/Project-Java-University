@@ -47,7 +47,7 @@ public class EventService {
                 .orElseThrow(() -> new IllegalArgumentException("Location not found"));
 
         Event event= eventRepo.findById((long) eventId)
-                .orElseThrow(() -> new IllegalArgumentException("Employee not found"));
+                .orElseThrow(() -> new IllegalArgumentException("Event not found"));
 
         // Assign the Employee to the Location
         event.setLocation(location);
@@ -58,7 +58,7 @@ public class EventService {
     public void delete(int id) {
         if(eventRepo.existsById((long) id)){
             Event event= eventRepo.findById((long) id)
-                    .orElseThrow(() -> new IllegalArgumentException("Employee not found"));
+                    .orElseThrow(() -> new IllegalArgumentException("Event not found"));
 
             eventRepo.delete(event);
         } else throw new IllegalArgumentException("Event doesnt exist");

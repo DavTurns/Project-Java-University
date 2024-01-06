@@ -4,13 +4,9 @@ import map.project.CoffeeShop.data.OrderFactory;
 import map.project.CoffeeShop.data.model.OnlineOrder;
 import map.project.CoffeeShop.data.model.Order;
 import map.project.CoffeeShop.data.model.OrderData;
-import map.project.CoffeeShop.service.OnlineOrderService;
-import map.project.CoffeeShop.service.OrderService;
+import map.project.CoffeeShop.service.OrderProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-
-import java.util.List;
-import java.util.Optional;
 
 @RestController
 @RequestMapping("/createOrder")
@@ -19,26 +15,27 @@ public class OnlineOrSimpleOrderCreateController {
 
     private final OnlineOrderController onlineOrderController;
 
+    private final OrderProductService orderProductController;
+
     @Autowired
-    public OnlineOrSimpleOrderCreateController(OrderController orderController, OnlineOrderController onlineOrderController) {
+    public OnlineOrSimpleOrderCreateController(OrderController orderController, OnlineOrderController onlineOrderController, OrderProductService orderProductController) {
         this.orderController = orderController;
         this.onlineOrderController = onlineOrderController;
+        this.orderProductController = orderProductController;
     }
 
     @PostMapping("")
-    public Optional<OrderData> create(@RequestBody OrderData orderData) {
+    public OrderData create(@RequestBody OrderData orderData) {
 
         Order order = OrderFactory.createOrder(orderData);
 
         if (order instanceof OnlineOrder) {
-            if (onlineOrderController.create((OnlineOrder) order).isPresent())
-                return Optional.of(orderData);
+            return orderData;
         } else {
             if (orderController.create(order).isPresent())
-                return Optional.of(orderData);
+                return orderData;
         }
-
-        return Optional.empty();
+        return null;
     }
 
 

@@ -1,11 +1,7 @@
 package map.project.CoffeeShop.data.model;
-import ch.qos.logback.core.joran.sanity.Pair;
+
 import jakarta.persistence.*;
 import lombok.Data;
-import lombok.EqualsAndHashCode;
-import lombok.ToString;
-
-import java.util.List;
 
 @Data
 //@ToString(exclude = "post")

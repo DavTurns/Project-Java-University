@@ -1,7 +1,6 @@
 package map.project.CoffeeShop.controller;
 
 import map.project.CoffeeShop.data.model.Event;
-import map.project.CoffeeShop.data.model.Location;
 import map.project.CoffeeShop.service.EventService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -29,8 +28,8 @@ public class EventController {
         return eventService.setLocation(eventId, locationId);
     }
 
-    @GetMapping("/getAll")
-    public List<Event> getAll(){
+    @GetMapping("/all")
+    public List<Event> getAll() {
         return eventService.getAll();
     }
 
@@ -39,7 +38,7 @@ public class EventController {
         eventService.delete(eventId);
     }
 
-    @GetMapping("{eventId}")
+    @GetMapping("/{eventId}")
     public Event getEvent(@PathVariable("eventId") int eventId) {
         return eventService.findById(eventId);
     }

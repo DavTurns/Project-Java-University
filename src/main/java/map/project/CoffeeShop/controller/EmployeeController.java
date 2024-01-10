@@ -23,8 +23,8 @@ public class EmployeeController {
         return employeeService.save(employee);
     }
 
-    @GetMapping("/getAll")
-    public List<Employee> getAll(){
+    @GetMapping("/all")
+    public List<Employee> getAll() {
         return employeeService.getAll();
     }
 
@@ -33,7 +33,7 @@ public class EmployeeController {
         employeeService.delete(employeeId);
     }
 
-    @GetMapping("{employeeId}")
+    @GetMapping("/{employeeId}")
     public Employee getEmployee(@PathVariable("employeeId") int employeeId) {
         return employeeService.findById(employeeId);
     }

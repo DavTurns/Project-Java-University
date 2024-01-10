@@ -1,5 +1,5 @@
 package map.project.CoffeeShop.data.model;
-import org.springframework.beans.factory.annotation.Value;
+
 import jakarta.persistence.*;
 import lombok.Data;
 

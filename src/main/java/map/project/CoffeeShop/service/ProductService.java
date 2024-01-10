@@ -3,11 +3,10 @@ package map.project.CoffeeShop.service;
 import jakarta.transaction.Transactional;
 import lombok.extern.slf4j.Slf4j;
 import map.project.CoffeeShop.data.model.Product;
-import map.project.CoffeeShop.util.Validators;
 import map.project.CoffeeShop.data.repository.ProductDBRepo;
+import map.project.CoffeeShop.util.Validators;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.web.bind.annotation.GetMapping;
 
 import java.util.Comparator;
 import java.util.List;
@@ -23,12 +22,12 @@ public class ProductService {
 
     public Product save(Product product) {
 
-        if(product.getPrice() < 0) {
+        if (product.getPrice() < 0) {
             log.error("Price of Product is negative");
             throw new IllegalArgumentException("Price of Product is negative");
         }
 
-        if(product.getSize() < 0) {
+        if (product.getSize() < 0) {
             log.error("Size of Product is negative");
             throw new IllegalArgumentException("Price of Product is negative");
         }
@@ -46,14 +45,15 @@ public class ProductService {
     }
 
     public List<Product> getAllFood() {
-        return  productRepo.findAll().stream().filter(x -> x.getUnit().equals("g"))
+        return productRepo.findAll().stream().filter(x -> x.getUnit().equals("g"))
                 .collect(Collectors.toList());
     }
 
     public List<Product> getAllDrinks() {
-        return  productRepo.findAll().stream().filter(x -> x.getUnit().equals("ml"))
+        return productRepo.findAll().stream().filter(x -> x.getUnit().equals("ml"))
                 .collect(Collectors.toList());
     }
+
     public List<Product> sortDrinksByPriceASC() {
         return getAllDrinks()
                 .stream()
@@ -83,7 +83,7 @@ public class ProductService {
     }
 
 
-    public Product getByID(int id){
+    public Product getByID(int id) {
         if (id <= 0) {
             log.error("Invalid ID");
             throw new IllegalArgumentException("Invalid ID");

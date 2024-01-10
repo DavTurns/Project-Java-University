@@ -9,7 +9,6 @@ import map.project.CoffeeShop.data.repository.EmployeeDBRepo;
 import map.project.CoffeeShop.data.repository.LocationDBRepo;
 import map.project.CoffeeShop.data.repository.ManagerDBRepo;
 import map.project.CoffeeShop.util.Validators;
-import map.project.CoffeeShop.data.repository.FoodDBRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -65,7 +64,8 @@ public class LocationService {
 
         // Add the Employee to the Location's employee list and save the changes
         List<Employee> employees = location.getEmployees();
-        if(!employees.removeIf(e -> e.getId() == employeeId)) throw new IllegalArgumentException("employee not employed at specified location");
+        if (!employees.removeIf(e -> e.getId() == employeeId))
+            throw new IllegalArgumentException("employee not employed at specified location");
 
         Employee employee = employeeRepo.findById((long) employeeId)
                 .orElseThrow(() -> new IllegalArgumentException("Employee not found"));
@@ -82,7 +82,7 @@ public class LocationService {
         Location location = locationRepo.findById((long) locationId)
                 .orElseThrow(() -> new IllegalArgumentException("Location not found"));
 
-        Manager manager= managerRepo.findById((long) managerId)
+        Manager manager = managerRepo.findById((long) managerId)
                 .orElseThrow(() -> new IllegalArgumentException("Employee not found"));
 
         // Assign the Employee to the Location
@@ -104,7 +104,7 @@ public class LocationService {
 
         Manager manager = location.getManager();
 
-        if(manager == null){
+        if (manager == null) {
             return location;
         }
 
@@ -121,29 +121,31 @@ public class LocationService {
     }
 
     //closelocation
-    public Location closeLocation(int locationId){
+    public Location closeLocation(int locationId) {
         // Fetch the Location and Employee entities from their respective repositories
         Location location = locationRepo.findById((long) locationId)
                 .orElseThrow(() -> new IllegalArgumentException("Location not found"));
 
         location.setActive(false);
 
-        // +feature kick out all employees
+        //TD +feature kick out all employees
 
         return locationRepo.save(location);
     }
 
-    public Location findLocationById(int id){
+    public Location findLocationById(int id) {
         Location location = locationRepo.findById((long) id)
                 .orElseThrow(() -> new IllegalArgumentException("Location not found"));
         return location;
     }
 
 
-    public void delete(int id){
+    public void delete(int id) {
         locationRepo.deleteById(Long.valueOf(id));
     }
 
-
+    public List<Location> findAll() {
+        return locationRepo.findAll();
+    }
 
 }

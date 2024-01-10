@@ -1,8 +1,5 @@
 package map.project.CoffeeShop.data;
 
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.OneToOne;
 import map.project.CoffeeShop.data.model.Location;
 import map.project.CoffeeShop.data.model.Manager;
 
@@ -10,7 +7,6 @@ public class ManagerBuilder {
     private int id;
 
     private Location location;
-
     private String firstName;
     private String lastName;
     private String address;
@@ -20,6 +16,7 @@ public class ManagerBuilder {
         this.id = id;
         return this;
     }
+
     public ManagerBuilder withFirstName(String firstName) {
         this.firstName = firstName;
         return this;
@@ -39,6 +36,7 @@ public class ManagerBuilder {
         this.salary = salary;
         return this;
     }
+
     public ManagerBuilder withLocation(Location location) {
         this.location = location;
         return this;

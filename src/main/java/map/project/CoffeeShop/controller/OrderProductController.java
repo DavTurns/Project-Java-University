@@ -20,25 +20,16 @@ public class OrderProductController {
 
     @PostMapping("/create")
     public OrderProduct create(@RequestBody OrderProduct op) {
-
-        /*
-        List<OrderProduct> allOrderProducts = getAll();
-        for(OrderProduct op2: allOrderProducts){
-            if(op2.getId() == op.getId()){
-                op.
-            }
-        }
-        */
         return orderProductService.save(op);
     }
 
     @GetMapping("/all")
-    public List<OrderProduct> getAll(){
+    public List<OrderProduct> getAll() {
         return orderProductService.findAll();
     }
 
     @GetMapping(path = "/{id}")
-    public Optional<OrderProduct> getByID(@PathVariable("id") int id){
+    public Optional<OrderProduct> getByID(@PathVariable("id") int id) {
         return orderProductService.getByID(id);
     }
 

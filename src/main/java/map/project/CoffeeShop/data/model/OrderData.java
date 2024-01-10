@@ -1,7 +1,5 @@
 package map.project.CoffeeShop.data.model;
 
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import jakarta.persistence.*;
 import lombok.Data;
 
 @Data

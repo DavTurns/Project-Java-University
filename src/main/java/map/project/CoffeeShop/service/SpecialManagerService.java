@@ -1,15 +1,8 @@
 package map.project.CoffeeShop.service;
 
-import map.project.CoffeeShop.data.model.Manager;
-
-import java.util.List;
-
 import jakarta.transaction.Transactional;
 import lombok.extern.slf4j.Slf4j;
 import map.project.CoffeeShop.data.model.Manager;
-import map.project.CoffeeShop.data.repository.ManagerDBRepo;
-import map.project.CoffeeShop.data.repository.ManagerDBRepo;
-import map.project.CoffeeShop.util.Validators;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -18,14 +11,14 @@ import java.util.List;
 @Slf4j
 @Service
 @Transactional
-public class SpecialManagerService implements ManagerServiceInterface{
+public class SpecialManagerService implements ManagerServiceInterface {
 
     @Autowired
     private ManagerService managerService;
 
     @Override
     public Manager save(Manager manager) {
-        if(manager.getSalary() > 10000)
+        if (manager.getSalary() > 10000)
             return managerService.save(manager);
         else return null;
     }

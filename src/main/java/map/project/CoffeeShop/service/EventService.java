@@ -4,7 +4,6 @@ import jakarta.transaction.Transactional;
 import lombok.extern.slf4j.Slf4j;
 import map.project.CoffeeShop.data.model.Event;
 import map.project.CoffeeShop.data.model.Location;
-import map.project.CoffeeShop.data.model.Manager;
 import map.project.CoffeeShop.data.repository.EventDBRepo;
 import map.project.CoffeeShop.data.repository.LocationDBRepo;
 import map.project.CoffeeShop.util.Validators;
@@ -37,16 +36,17 @@ public class EventService {
     public List<Event> getAll() {
         return eventRepo.findAll();
     }
+
     public Event findById(int id) {
         return eventRepo.findById((long) id).orElse(null);
     }
 
-    public Event setLocation(int eventId, int locationId){
+    public Event setLocation(int eventId, int locationId) {
         // find the location and the event
         Location location = locationRepo.findById((long) locationId)
                 .orElseThrow(() -> new IllegalArgumentException("Location not found"));
 
-        Event event= eventRepo.findById((long) eventId)
+        Event event = eventRepo.findById((long) eventId)
                 .orElseThrow(() -> new IllegalArgumentException("Event not found"));
 
         // Assign the Employee to the Location
@@ -56,8 +56,8 @@ public class EventService {
     }
 
     public void delete(int id) {
-        if(eventRepo.existsById((long) id)){
-            Event event= eventRepo.findById((long) id)
+        if (eventRepo.existsById((long) id)) {
+            Event event = eventRepo.findById((long) id)
                     .orElseThrow(() -> new IllegalArgumentException("Event not found"));
 
             eventRepo.delete(event);

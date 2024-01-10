@@ -6,7 +6,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-import java.util.stream.Collectors;
 
 @RestController
 @RequestMapping("/products")
@@ -28,12 +27,17 @@ public class ProductController {
 
     @GetMapping("/food/all")
     public List<Product> getAllFood() {
-        return  productService.getAllFood();
+        return productService.getAllFood();
     }
 
     @GetMapping("/drinks/all")
     public List<Product> getAllDrinks() {
         return productService.getAllDrinks();
+    }
+
+    @GetMapping("/all")
+    public List<Product> getAllProducts() {
+        return productService.findAll();
     }
 
     @GetMapping("/drinks/sortByPrice/asc")
@@ -56,13 +60,8 @@ public class ProductController {
         return productService.sortFoodByPriceDESC();
     }
 
-    @GetMapping("/all")
-    public List<Product> getAllProducts(){
-        return productService.findAll();
-    }
-
     @GetMapping(path = "/{id}")
-    public Product getByID(@PathVariable("id") int id){
+    public Product getByID(@PathVariable("id") int id) {
         return productService.getByID(id);
     }
 

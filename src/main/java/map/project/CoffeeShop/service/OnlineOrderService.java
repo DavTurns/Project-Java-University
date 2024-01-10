@@ -26,7 +26,7 @@ public class OnlineOrderService {
         return onlineOrderDBRepo.findAll();
     }
 
-    public Optional<OnlineOrder> getByID(int id){
+    public Optional<OnlineOrder> getByID(int id) {
         if (id <= 0) {
             log.error("Invalid ID");
             throw new IllegalArgumentException("Invalid ID");

@@ -1,9 +1,7 @@
 package map.project.CoffeeShop.controller;
 
 import map.project.CoffeeShop.data.model.OnlineOrder;
-import map.project.CoffeeShop.data.model.Order;
 import map.project.CoffeeShop.service.OnlineOrderService;
-import map.project.CoffeeShop.service.OrderService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -25,13 +23,14 @@ public class OnlineOrderController {
         return onlineOrderService.save(order);
 
     }
+
     @GetMapping("/all")
     public List<OnlineOrder> getAll() {
         return onlineOrderService.findAll();
     }
 
     @GetMapping(path = "/{id}")
-    public Optional<OnlineOrder> getByID(@PathVariable("id") int id){
+    public Optional<OnlineOrder> getByID(@PathVariable("id") int id) {
         return onlineOrderService.getByID(id);
     }
 

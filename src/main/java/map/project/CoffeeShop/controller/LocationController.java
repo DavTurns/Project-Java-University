@@ -1,19 +1,25 @@
 package map.project.CoffeeShop.controller;
 
 import map.project.CoffeeShop.data.model.Location;
+import map.project.CoffeeShop.data.model.LocationProduct;
+import map.project.CoffeeShop.service.LocationProductService;
 import map.project.CoffeeShop.service.LocationService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 @RestController
 @RequestMapping("/location")
 public class LocationController {
 
     private final LocationService locationService;
+    private final LocationProductService locationProductService;
 
     @Autowired
-    public LocationController(LocationService locationService) {
+    public LocationController(LocationService locationService, LocationProductService locationProductService) {
         this.locationService = locationService;
+        this.locationProductService = locationProductService;
     }
 
     @PostMapping("/create")
@@ -51,9 +57,29 @@ public class LocationController {
         return locationService.findLocationById(locationId);
     }
 
-    @DeleteMapping("delete/{locationId}")
+    @GetMapping("/allAvailableProducts/{locationId}")
+    public List<LocationProduct> removeProductFromStock(@PathVariable("locationId") int locationId) {
+        return locationProductService.getAllByLocationId(locationId);
+    }
+
+    @DeleteMapping("/delete/{locationId}")
     public void deleteLocation(@PathVariable("locationId") int locationId) {
         locationService.delete(locationId);
+    }
+
+    @PutMapping("/addProductToStock")
+    public void addProductToStock(@RequestBody LocationProduct locationProduct) {
+        locationProductService.addProductToStock(locationProduct);
+    }
+
+    @PostMapping("/removeProductFromStock/{locationId}/{productId}/{quantity}")
+    public void removeProductFromStock(@PathVariable("locationId") int locationId, @PathVariable("productId") int productId, @PathVariable("quantity") int quantity) {
+        locationProductService.removeByLocationProductId(locationId, productId, quantity);
+    }
+
+    @GetMapping("/all")
+    public List<Location> showAll() {
+        return locationService.findAll();
     }
 
 }

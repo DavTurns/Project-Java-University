@@ -1,5 +1,5 @@
 package map.project.CoffeeShop.controller;
-import org.springframework.beans.factory.annotation.Value;
+
 import map.project.CoffeeShop.data.model.Customer;
 import map.project.CoffeeShop.service.CustomerService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,17 +25,18 @@ public class CustomerController {
         return customerService.save(customer);
 
     }
+
     @GetMapping("/all")
     public List<Customer> getAll() {
         return customerService.findAll();
     }
 
     @GetMapping(path = "/{id}")
-    public Optional<Customer> getByID(@PathVariable("id") int id){
+    public Optional<Customer> getByID(@PathVariable("id") int id) {
         return customerService.getByID(id);
     }
 
-    @DeleteMapping("/{id}")
+    @DeleteMapping("delete/{id}")
     public void deleteById(@PathVariable int id) {
         customerService.deleteById(id);
     }

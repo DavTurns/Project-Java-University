@@ -26,7 +26,7 @@ public class EmployeeService {
 
     public Employee save(Employee employee) {
 
-        if(employee.getLocation() != null) {
+        if (employee.getLocation() != null) {
             log.error("Location has to be set to null when creating a new Employee");
             throw new IllegalArgumentException("Location has to be set to null when creating a new Employee");
         }
@@ -38,7 +38,7 @@ public class EmployeeService {
 
         // Builderpattern creational pattern
         // if title is Manager, then the employee will be stored as a Manager
-        if(employee.getTitle().equals("manager")){
+        if (employee.getTitle().equals("manager")) {
             Manager newManager = new ManagerBuilder()
                     .withFirstName(employee.getFirstName())
                     .withLastName(employee.getLastName())
@@ -57,12 +57,13 @@ public class EmployeeService {
     public List<Employee> getAll() {
         return employeeRepo.findAll();
     }
+
     public Employee findById(int id) {
         return employeeRepo.findById((long) id).orElse(null);
     }
 
     public void delete(int id) {
-        if(employeeRepo.existsById((long) id)){
+        if (employeeRepo.existsById((long) id)) {
             employeeRepo.delete(findById(id));
         } else throw new IllegalArgumentException("Employee doesnt exist");
     }

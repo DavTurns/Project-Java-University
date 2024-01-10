@@ -7,6 +7,8 @@ CREATE TABLE `products` (
                             PRIMARY KEY (`id`)
 );
 
+
+
 CREATE TABLE coffeeshop.location (
                                      `id` int NOT NULL AUTO_INCREMENT,
                                      name VARCHAR(64) NOT NULL,
@@ -73,6 +75,27 @@ Create Table coffeeshop.order_products(
                                           foreign key (order_id) references coffeeshop.orders(id),
                                           foreign key (product_id) references coffeeshop.products(id)
 );
+
+--this is the many to many vaordersriant
+CREATE TABLE order_products (
+    order_id INT NOT NULL,
+    product_id INT NOT NULL,
+    quantity INT, -- Additional columns related to the relationship
+    PRIMARY KEY (order_id, product_id),
+    FOREIGN KEY (order_id) REFERENCES orders(id),
+    FOREIGN KEY (product_id) REFERENCES products(id)
+);
+
+CREATE TABLE `location_products` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `location_id` int DEFAULT NULL,
+  `product_id` int DEFAULT NULL,
+  `quantity` int DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  FOREIGN KEY (`location_id`) REFERENCES `location` (`id`),
+  FOREIGN KEY (`product_id`) REFERENCES `products` (`id`)
+);
+
 
 CREATE TABLE `customer` (
                             `id` int NOT NULL AUTO_INCREMENT,

@@ -1,3 +1,66 @@
+GET localhost:8080/order/getTotalPrice/ORDERID
+
+PUT localhost:8080/order/addProduct/{{orderId}}/{{productId}}/{{count}}
+
+GET localhost:8080/products/drinks/all
+
+GET localhost:8080/products/food/all
+
+POST localhost:8080/order/create
+Content-Type: application/json
+
+{
+  "id": 1,
+  "location": {
+    "id": LOCATIONID
+  },
+
+  "customer": {
+    "id": CUSTOMERID
+  },
+  "date_time": "2024.01.2:06:13"
+}
+
+
+PUT localhost:8080/location/addProductToStock
+Content-Type: application/json
+
+{
+  "location": {
+    "id": LOCATIONID
+  },
+
+  "product": {
+    "id": 1
+
+  },
+  "quantity": 40
+}
+
+PUT localhost:8080/location/addEmployee/{{locationId}}/{{employeeId}}
+
+
+POST localhost:8080/employee/create
+Content-Type: application/json
+
+{
+  "id": 22,
+  "firstName": "Ernie",
+  "lastName": "Eager",
+  "address": "EagersAddress",
+  "salary": 40000,
+  "title": "waiter"
+}
+
+
+POST localhost:8080/order/create
+Content-Type: application/json
+
+{
+
+}
+
+
 POST localhost:8080/order_products/create
 Content-Type: application/json
 

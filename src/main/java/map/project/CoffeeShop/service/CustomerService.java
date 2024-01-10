@@ -1,8 +1,8 @@
 package map.project.CoffeeShop.service;
+
 import jakarta.transaction.Transactional;
 import lombok.extern.slf4j.Slf4j;
 import map.project.CoffeeShop.data.model.Customer;
-import map.project.CoffeeShop.data.repository.CustomerDBRepo;
 import map.project.CoffeeShop.data.repository.CustomerRepository;
 import map.project.CoffeeShop.util.Validators;
 import org.springframework.beans.factory.annotation.Qualifier;
@@ -17,10 +17,10 @@ import java.util.Optional;
 public class CustomerService {
 
 
-
     private final CustomerRepository customerRepo;
 
-    public CustomerService(@Qualifier("customerInMemoryRepo") CustomerRepository customerRepo) {
+    //customerDBRepo
+    public CustomerService(@Qualifier("customerDBRepo") CustomerRepository customerRepo) {
         this.customerRepo = customerRepo;
     }
 
@@ -48,7 +48,7 @@ public class CustomerService {
         return customerRepo.findAll();
     }
 
-    public Optional<Customer> getByID(int id){
+    public Optional<Customer> getByID(int id) {
         if (id <= 0) {
             log.error("Invalid ID");
             throw new IllegalArgumentException("Invalid ID");

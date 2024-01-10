@@ -1,13 +1,13 @@
 package map.project.CoffeeShop.data.model;
-import com.fasterxml.jackson.annotation.JsonAutoDetect;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.*;
 import lombok.Data;
-import lombok.EqualsAndHashCode;
-import lombok.ToString;
-import org.springframework.context.ApplicationEvent;
 
 import java.util.List;
+
+import static jakarta.persistence.CascadeType.ALL;
 
 @Data
 
@@ -35,10 +35,16 @@ public class Location {
 
     @OneToMany(mappedBy = "location", cascade = CascadeType.REMOVE)
     @JsonIgnoreProperties("location") //to not create an infinite loop while serializing to JSON
+    @JsonIgnore
     private List<Order> orders;
 
     @OneToMany(mappedBy = "location", cascade = CascadeType.DETACH)
     @JsonIgnoreProperties("location") //to not create an infinite loop while serializing to JSON
     private List<Event> events;
 
+    @OneToMany(targetEntity = map.project.CoffeeShop.data.model.LocationProduct.class, cascade = ALL,
+            mappedBy = "location")
+    @JsonIgnoreProperties("location")
+    @JsonIgnore
+    private List<LocationProduct> locationProducts;
 }

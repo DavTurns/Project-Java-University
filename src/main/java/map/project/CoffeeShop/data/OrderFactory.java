@@ -6,8 +6,8 @@ import map.project.CoffeeShop.data.model.OrderData;
 
 public class OrderFactory {
 
-    public static Order createOrder(OrderData orderData){
-        if(orderData.getDeliveryAddress() == null || orderData.getDeliveryMan() == null){
+    public static Order createOrder(OrderData orderData) {
+        if (orderData.getDeliveryAddress() == null || orderData.getDeliveryMan() == null) {
             Order order = new Order();
             order.setId(orderData.getId());
             order.setCustomer(orderData.getCustomer());
@@ -15,7 +15,8 @@ public class OrderFactory {
             order.setDate_time(orderData.getDateTime());
             return order;
         }
-        if(!orderData.getDeliveryAddress().isEmpty() && !orderData.getDeliveryMan().isEmpty()){
+
+        if (!orderData.getDeliveryAddress().isEmpty() && !orderData.getDeliveryMan().isEmpty()) {
             OnlineOrder onlineOrder = new OnlineOrder();
             onlineOrder.setId(orderData.getId());
             onlineOrder.setCustomer(orderData.getCustomer());
@@ -24,9 +25,7 @@ public class OrderFactory {
             onlineOrder.setDelivery_man(orderData.getDeliveryMan());
             onlineOrder.setDelivery_address(orderData.getDeliveryAddress());
             return onlineOrder;
-        }
-
-        else {
+        } else {
             Order order = new Order();
             order.setId(orderData.getId());
             order.setCustomer(orderData.getCustomer());

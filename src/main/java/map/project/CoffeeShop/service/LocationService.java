@@ -126,9 +126,18 @@ public class LocationService {
         Location location = locationRepo.findById((long) locationId)
                 .orElseThrow(() -> new IllegalArgumentException("Location not found"));
 
-        location.setActive(false);
+        location.getEmployees().stream().forEach(employee -> {
+            employee.setLocation(null);
+            employeeRepo.save(employee);
+        });
+        location.setEmployees(List.of());
 
-        //TD +feature kick out all employees
+        Manager manager = location.getManager();
+        manager.setLocation(null);
+        managerRepo.save(manager);
+        location.setManager(null);
+
+        location.setActive(false);
 
         return locationRepo.save(location);
     }

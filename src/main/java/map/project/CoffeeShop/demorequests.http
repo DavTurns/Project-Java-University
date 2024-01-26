@@ -7,17 +7,17 @@ Content-Type: application/json
   "lastName": "Customer",
   "address": "CustomerAddress 123 Customercity 22333"
 }
-
+###
 POST localhost:8080/location/create
 Content-Type: application/json
 
 {
-  "id": 900
+  "id": 900,
   "name": "myRestaurant",
   "address": "IdontKnow130",
   "active": true
 }
-
+###
 POST localhost:8080/manager/create
 Content-Type: application/json
 
@@ -25,12 +25,14 @@ Content-Type: application/json
 "id": 22,
 "firstName": "Manny",
 "lastName": "Manager",
-"address": "ManagerAddress100",
+"address": "Man100",
 "salary": 40000
 }
 
-PUT localhost:8080/setManager/{locationId}/{managerId}
+###
+PUT localhost:8080/location/setManager/5/5
 
+###
 POST localhost:8080/employee/create
 Content-Type: application/json
 
@@ -93,4 +95,6 @@ Content-Type: application/json
 PUT localhost:8080/order/addProduct/{{orderId}}/{{productId}}/{{count}}
 
 GET localhost:8080/order/getTotalPrice/ORDERID
+
+GET localhost:8080/products/food/sortByPrice/asc
 
